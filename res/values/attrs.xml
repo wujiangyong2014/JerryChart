@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="JerryChartView">
+        <attr name="lineColor" format="reference|color" />
+        <attr name="lineWidth" format="dimension" />
+        <attr name="distance" format="dimension" />
+        <attr name="android:textSize"/>
+        <attr name="startAngle" format="float" />
+        <attr name="chartStyle">
+            <enum name="FANSHAPE" value="0" />
+            <enum name="ANNULAR" value="1" />
+        </attr>
+    </declare-styleable>
+
+</resources>
