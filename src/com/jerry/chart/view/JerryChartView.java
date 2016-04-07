@@ -184,7 +184,7 @@ public class JerryChartView extends View {
 			sweepAngle = 360 * chartData.getProgress();
 
 			RectF rectf2 = null;
-			Log.e(TAG, "startAngle=" + startAngle + ",sweepAngle=" + sweepAngle);
+			//Log.e(TAG, "startAngle=" + startAngle + ",sweepAngle=" + sweepAngle);
 			float value = (startAngle + sweepAngle / 2) % 360;
 			// Log.e(TAG, "value=" + value);
 			if (value <= 0) {
@@ -277,6 +277,9 @@ public class JerryChartView extends View {
 			}
 
 			// Log.e(TAG, value + "," + textX + "," + textX + "," + text);
+			/**
+			 * 绘制分割线
+			 */
 			canvas.drawArc(rectf3, startAngle, sweepAngle, true, linePaint);
 
 			startAngle = startAngle + sweepAngle;

@@ -51,7 +51,11 @@ public class MainActivity extends Activity {
 		jcv3.setData(datas2);
 		jcv4.setData(datas);
 	}
-	public void aa(View v){
+	/**
+	 * QQ临时会话
+	 * @param v
+	 */
+	public void qqTemporarySession(View v){
 		String url="mqqwpa://im/chat?chat_type=wpa&uin=1239560291";  
 		startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
 	}

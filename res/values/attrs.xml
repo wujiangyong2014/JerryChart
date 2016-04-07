@@ -2,11 +2,17 @@
 <resources>
 
     <declare-styleable name="JerryChartView">
+        <!-- 分割线颜色（应与背景色一致） -->
         <attr name="lineColor" format="reference|color" />
+        <!-- 分割线宽度 -->
         <attr name="lineWidth" format="dimension" />
+        <!-- 突出部分圆心距离原位置的圆心（仅扇形有效） -->
         <attr name="distance" format="dimension" />
+        <!-- 百分比文本大小 -->
         <attr name="android:textSize"/>
+        <!-- 起始绘制角度 3点方向为0，默认为12点方向（-90） -->
         <attr name="startAngle" format="float" />
+        <!-- 扇形or环形 -->
         <attr name="chartStyle">
             <enum name="FANSHAPE" value="0" />
             <enum name="ANNULAR" value="1" />
