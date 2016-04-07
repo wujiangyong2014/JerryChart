@@ -11,10 +11,14 @@
         android:gravity="center_horizontal"
         android:padding="20dp" >
 
-        <com.jerry.chart.view.JerryChartView
+        
+       <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.jerry.chart.view.JerryChartView
             android:id="@+id/jcv"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:background="#dedede"
             android:textSize="12sp"
             app:chartStyle="FANSHAPE"
@@ -24,13 +28,40 @@
 
         <com.jerry.chart.view.JerryChartView
             android:id="@+id/jcv2"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:background="#dedede"
             app:chartStyle="ANNULAR"
             app:lineColor="#dedede"
             app:lineWidth="1dp"
             app:startAngle="-30" />
+            
+        </LinearLayout>
+        <com.jerry.chart.view.JerryChartView
+            android:id="@+id/jcv3"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="#dedede"
+            app:chartStyle="FANSHAPE"
+            app:distance="10dp"
+            app:lineColor="#dedede"
+            app:lineWidth="1dp" 
+            app:startAngle="270"/>
+
+        <com.jerry.chart.view.JerryChartView
+            android:id="@+id/jcv4"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="#dedede"
+            app:chartStyle="ANNULAR"
+            app:lineColor="#dedede"
+            app:lineWidth="1dp"
+            app:startAngle="-30" />
+        <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="aaa"
+            android:onClick="aa"/>
     </LinearLayout>
 
 </ScrollView>

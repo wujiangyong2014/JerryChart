@@ -7,11 +7,14 @@ import com.jerry.chart.entity.ChartData;
 import com.jerry.chart.view.JerryChartView;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 
 public class MainActivity extends Activity {
 
-	private JerryChartView jcv, jcv2;
+	private JerryChartView jcv, jcv2,jcv3, jcv4;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +22,8 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		jcv = (JerryChartView) findViewById(R.id.jcv);
 		jcv2 = (JerryChartView) findViewById(R.id.jcv2);
+		jcv3 = (JerryChartView) findViewById(R.id.jcv3);
+		jcv4 = (JerryChartView) findViewById(R.id.jcv4);
 
 		List<ChartData> datas = new ArrayList<>();
 
@@ -28,7 +33,7 @@ public class MainActivity extends Activity {
 		datas.add(cd0);
 		datas.add(cd1);
 		datas.add(cd2);
-		jcv.setData(datas);
+		
 		List<ChartData> datas2 = new ArrayList<>();
 
 		ChartData cd02 = new ChartData(0xffA89C8E, 0.05f, 0xffffffff, false);
@@ -39,6 +44,15 @@ public class MainActivity extends Activity {
 		datas2.add(cd12);
 		datas2.add(cd22);
 		datas2.add(cd32);
+		
+		jcv.setData(datas);
 		jcv2.setData(datas2);
+		
+		jcv3.setData(datas2);
+		jcv4.setData(datas);
+	}
+	public void aa(View v){
+		String url="mqqwpa://im/chat?chat_type=wpa&uin=1239560291";  
+		startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
 	}
 }

@@ -8,10 +8,22 @@ package com.jerry.chart.entity;
  */
 public class ChartData {
 
-	private int color;//16进制ARGB色彩值
-	private float progress;//0.25(保留两位)
-	private int textColor;//16进制ARGB色彩值，文本颜色
-	private boolean isFloat;//是否突出
+	/**
+	 * 16进制ARGB色彩值
+	 */
+	private int color;
+	/**
+	 * 0.25(保留两位)
+	 */
+	private float progress;
+	/**
+	 * 16进制ARGB色彩值，文本颜色
+	 */
+	private int textColor;
+	/**
+	 * 是否突出{仅扇形支持突出，环形不支持}
+	 */
+	private boolean isFloat;
 	public ChartData() {
 	}
 	public ChartData(int color, float progress, int textColor, boolean isFloat) {
